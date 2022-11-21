@@ -1,15 +1,8 @@
 import './App.css';
-import Forms from './components/Forms';
-import Table from './components/Table';
-import AppProvider from './context/appProvider';
+import HomePage from './Pages/HomePage';
 
 function App() {
-  return (
-    <AppProvider>
-      <Forms />
-      <Table />
-    </AppProvider>
-  );
+  return <HomePage />;
 }
 
 export default App;

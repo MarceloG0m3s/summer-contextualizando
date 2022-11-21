@@ -1,18 +1,16 @@
-import React, { useContext } from 'react'
-import AppContext from '../context/appContext'
+import React from 'react';
 
 export default function Forms() {
-  const { name, handleName, gender, handleGender, episode, handleEpisode, quanty, handleQuanty } = useContext(AppContext);
 
   return (
     <form>
       <label htmlFor="name">
         Nome:
-        <input type="text" id="name" value={ name } onChange={ handleName } />
+        <input type="text" id="name"/>
       </label>
       <label htmlFor="gender">
         Gênero:
-        <select name="gender" id="gender" value={ gender } onChange={ handleGender }>
+        <select name="gender" id="gender">
           <option value="">Todos</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
@@ -20,12 +18,12 @@ export default function Forms() {
       </label>
       <label htmlFor="episode">
         Episódios:
-        <select name="episode" id="episode" value={ episode } onChange={ handleEpisode }>
+        <select name="episode" id="episode">
             <option value="maior que">maior que</option>
             <option value="menor que">menor que</option>
             <option value="igual a">igual a</option>
           </select>
-          <input type="text" value={ quanty } onChange={ handleQuanty } />
+          <input type="text"/>
       </label>
       <button>Filtrar Episódio</button>
     </form>
